@@ -22,6 +22,8 @@
 > > > Spring Cloud Feign 服务调用
 > > >
 > > > Spring Cloud Gateway 作为网关
+> > >
+> > > ~~Spring Cloud Config~~ 为什么不用呢，因为项目在本地实现的，用spring cloud config反而折腾的每次去搞配置
 > >
 > > MySql 作为关系型数据库
 > >
@@ -31,7 +33,7 @@
 > >
 > > 其他... 用到再说
 > >
-> 
+>
 > 前端部分等这个写完之后我用Vue来制作第一版的前端
 
 后续跟进计划：
