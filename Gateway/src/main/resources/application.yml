@@ -5,3 +5,27 @@ spring:
     username:
     url:
     password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  application:
+    name: Gateway
+
+server:
+  port: ${Gaiety.gateway.port}
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${Gaiety.eureka.name}:${Gaiety.eureka.password}@${Gaiety.eureka.host}:${Gaiety.eureka.port}/eureka
+
+Gaiety:
+  eureka:
+    host: localhost
+    port: 8761
+    name: admin
+    password: 123456
+  gateway:
+    port: 8901
+
