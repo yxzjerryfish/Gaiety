@@ -1,8 +1,10 @@
 package com.fish.gaiety.gateway.service.impl;
 
+import com.alibaba.fastjson.JSON;
 import com.fish.gaiety.gateway.entity.user.UserLoginInfo;
 import com.fish.gaiety.gateway.repository.UserRepository;
 import com.fish.gaiety.gateway.service.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -15,6 +17,7 @@ import javax.annotation.Resource;
  * @date : 2020/6/8 12:57
  */
 @Service
+@Slf4j
 public class UserServiceImpl implements UserService {
 
     @Resource
@@ -28,6 +31,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void addUser(UserLoginInfo userLoginInfo) {
-        return;
+        UserLoginInfo savedUserLoginInfo = userRepository.save(userLoginInfo);
+        log.info("Add new login User success : {}", JSON.toJSON(savedUserLoginInfo));
     }
 }

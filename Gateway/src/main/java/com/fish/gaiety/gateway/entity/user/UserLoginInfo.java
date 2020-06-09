@@ -1,6 +1,8 @@
 package com.fish.gaiety.gateway.entity.user;
 
 
+import lombok.Data;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,6 +16,7 @@ import javax.persistence.Id;
  * @date : 2020/6/8 12:01
  */
 @Entity
+@Data
 public class UserLoginInfo {
     @Id
     @GeneratedValue
